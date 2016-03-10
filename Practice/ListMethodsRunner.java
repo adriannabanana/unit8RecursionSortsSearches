@@ -4,8 +4,8 @@ public class ListMethodsRunner
 {
    public static void main(String[] args)
    {
-      ArrayList<Integer> tempList = ListMethods.makeList(5);
-      
+      ArrayList<Integer> tempList = ListMethods.makeList(100);
+      ListMethods.reverseList(tempList);
       if (tempList.size() == 0)
       {
           System.out.println("The list is empty");
