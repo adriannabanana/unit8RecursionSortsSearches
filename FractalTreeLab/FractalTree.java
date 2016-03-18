@@ -59,7 +59,7 @@ public class FractalTree extends JPanel
         Graphics2D g2 = (Graphics2D) page;
         super.paintComponent(page);
 
-        page.setColor (Color.green);
+        page.setColor (Color.CYAN);
 
         g2.drawLine(350,600,350,150);
         drawFractal (g2,350,420,200,0);
