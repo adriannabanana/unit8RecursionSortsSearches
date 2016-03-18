@@ -1,27 +1,25 @@
-//********************************************************************
-//  KochSnowflakeViewer.java       Author: Lewis/Loftus/Cocking
-//
-//  Demonstrates the use of recursion.
-//  @gcschmit (19 July 2014): converted from an applet to an application
-//********************************************************************
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+/**
+ * View the fractal tree
+ * 
+ * @Adrianna
+ * @3/18/16
+ */
+
 public class FractalTreeViewer implements ActionListener
 {
+    /** width of frame */
     private final int WIDTH = 700;
+    /** height of frame */
     private final int HEIGHT = 700;
 
-    private JLabel titleLabel;
     private FractalTree drawing;
     private JPanel panel;
     private JFrame frame;
 
-    //-----------------------------------------------------------------
-    //  Sets up the components for the applet.
-    //-----------------------------------------------------------------
     public static void main(String[] args)
     {
         FractalTreeViewer viewer = new FractalTreeViewer();
@@ -29,16 +27,11 @@ public class FractalTreeViewer implements ActionListener
 
     public FractalTreeViewer()
     {
-        titleLabel = new JLabel ("Fractal Tree");
-        titleLabel.setForeground (Color.black);
-
-        drawing = new FractalTree (1);
-
         frame = new JFrame();
         frame.setTitle("Fractal Tree");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(WIDTH, HEIGHT);
-        frame.add(drawing);
+        frame.add(new FractalTree());
         frame.setVisible(true);
     }
 

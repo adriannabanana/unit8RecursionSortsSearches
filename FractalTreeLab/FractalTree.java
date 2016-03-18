@@ -6,19 +6,13 @@ public class FractalTree extends JPanel
     private final int PANEL_WIDTH = 400;
     private final int PANEL_HEIGHT = 400;
 
-    //private int current; //current order
-
-    private final int TOPX = 200, TOPY = 20;
-    private final int LEFTX = 60, LEFTY = 300;
-    private final int RIGHTX = 340, RIGHTY = 300;
-
     private final double scalingFactor = .60;
     private double branchAngle = Math.toRadians(60); 
     private final int minBranchLength = 1;
     //-----------------------------------------------------------------
     //  Sets the initial fractal order to the value specified.
     //-----------------------------------------------------------------
-    public FractalTree (int currentOrder)
+    public FractalTree ()
     {
         setBackground (Color.black);
         setPreferredSize (new Dimension(PANEL_WIDTH, PANEL_HEIGHT));
