@@ -26,10 +26,8 @@ public class RecordReader
    {
       String name = in.next();
       int count = in.nextInt();
-      double percent = in.nextDouble();
       
       if (total < limit) { System.out.print(name + " "); }
-      total = total + percent;
    }
 
    /**
