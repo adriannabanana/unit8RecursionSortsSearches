@@ -5,16 +5,18 @@ import java.util.Scanner;
 */
 public class RecordReader
 {
-   private double total;
+   private double current;
    private double limit;
+   private double total;
 
    /**
       Constructs a RecordReader with a zero total.
    */
-   public RecordReader(double aLimit)
+   public RecordReader(double aLimit, double aTotal, double currentCount)
    {
-      total = 0;
       limit = aLimit;
+      total = aTotal;
+      current = currentCount;
    }
 
    /**
@@ -26,9 +28,10 @@ public class RecordReader
    {
       String name = in.next();
       int count = in.nextInt();
-      
-      if (total < limit) { System.out.print(name + " "); }
+      current+=count;
+      if (current/total < limit) { System.out.print(name + " "); }
    }
+   
 
    /**
       Checks whether there are more inputs to process
@@ -36,6 +39,6 @@ public class RecordReader
    */
    public boolean hasMore()
    {
-      return total < limit;
+      return current/total < limit;
    }
 }
