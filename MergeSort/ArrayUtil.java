@@ -44,13 +44,7 @@ public class ArrayUtil
         String characters = "abcdefghijklmnopqrstuvwxyz";
         for (int i = 0; i < length; i++)
         {
-            String yay = "";
-            for (int j = 0; j < numChars; j++)
-            {
-                int randNum = generator.nextInt(26);
-                yay += characters.substring(randNum,randNum+1);
-            }
-            text[i] = yay;
+            text[i] = randomString(numChars);
         }
         return text;
     }
